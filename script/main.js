@@ -19,7 +19,7 @@ function result() {
   const xItem = randomValueFromArray(insertX);
   const yItem = randomValueFromArray(insertY);
   const zItem = randomValueFromArray(insertZ);
-  newStory = newStory.replace(":insertx:", xItem);
+  newStory.replace(xItem, yItem, zItem);
   
   if(customName.value !== '') {
     const name = customName.value;
@@ -35,9 +35,3 @@ function result() {
   story.textContent = ;
   story.style.visibility = 'visible';
 }
-
-let newStory = storyText;
-let xItem = randomValueFromArray(insertX);
-let yItem = randomValueFromArray(insertY);
-let zItem = randomValueFromArray(insertZ);
-newStory.replace(xItem, yItem, zItem);
