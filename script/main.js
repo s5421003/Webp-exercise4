@@ -19,7 +19,9 @@ function result() {
   const xItem = randomValueFromArray(insertX);
   const yItem = randomValueFromArray(insertY);
   const zItem = randomValueFromArray(insertZ);
-  newStory.replace(xItem, yItem, zItem);
+  newStory.replaceAll(":insertx:", xItem);
+  newStory.replaceAll(":inserty:", yItem);
+  newStory.replaceAll(":insertz:", zItem);
   
   if(customName.value !== '') {
     const name = customName.value;
